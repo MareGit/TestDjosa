@@ -4,7 +4,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [HumanResources].[Department](
 	[DepartmentID] [smallint] IDENTITY(1,1) NOT NULL,
-	[Name] [dbo].[Name] NOT NULL,
+	[NameMare] [dbo].[Name] NOT NULL,
 	[GroupName] [dbo].[Name] NOT NULL,
 	[ModifiedDate] [datetime] NOT NULL,
  CONSTRAINT [PK_Department_DepartmentID] PRIMARY KEY CLUSTERED 
