@@ -7,7 +7,7 @@ CREATE TABLE [dbo].[DatabaseLog](
 	[PostTime] [datetime] NOT NULL,
 	[DatabaseUser] [sysname] COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
 	[Event] [sysname] COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
-	[Schema] [sysname] COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+	[Schema1] [sysname] COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 	[Object] [sysname] COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 	[TSQL] [nvarchar](max) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
 	[XmlEvent] [xml] NOT NULL,
@@ -26,7 +26,7 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The user who i
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The type of DDL statement that was executed.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'DatabaseLog', @level2type=N'COLUMN',@level2name=N'Event'
 GO
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The schema to which the changed object belongs.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'DatabaseLog', @level2type=N'COLUMN',@level2name=N'Schema'
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The schema to which the changed object belongs.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'DatabaseLog', @level2type=N'COLUMN',@level2name=N'Schema1'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The object that was changed by the DDL statment.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'DatabaseLog', @level2type=N'COLUMN',@level2name=N'Object'
 GO
