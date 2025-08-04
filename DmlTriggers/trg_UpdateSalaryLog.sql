@@ -2,7 +2,6 @@
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-
 -- Create trigger
 CREATE TRIGGER [dbo].[trg_UpdateSalaryLog]
 ON [dbo].[Employees]
