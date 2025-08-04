@@ -8,7 +8,6 @@ CREATE PROCEDURE [dbo].[sp_GetEmployeesHiredAfter]
 AS
 BEGIN
     SET NOCOUNT ON;
-    SELECT EmployeeID, FirstName, LastNameg, HireDate5
+    SELECT EmployeeID, FirstName, HireDate5
     FROM Employees
- 
 END;
