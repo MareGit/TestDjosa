@@ -1,0 +1,4 @@
+CREATE SCHEMA [Sales]
+    AUTHORIZATION [dbo];
+GO
+GRANT SELECT ON SCHEMA::[Sales] TO [SalesReader] AS [dbo]
