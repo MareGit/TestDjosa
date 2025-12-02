@@ -1,0 +1,2 @@
+CREATE USER [DemoUser] FOR LOGIN [DemoUser]
+    WITH DEFAULT_SCHEMA = [dbo];
