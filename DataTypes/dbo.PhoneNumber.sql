@@ -1,0 +1,6 @@
+CREATE TYPE [dbo].[PhoneNumber]
+    FROM NVARCHAR (20) NOT NULL;
+GO
+ALTER AUTHORIZATION
+    ON TYPE::[dbo].[PhoneNumber]
+    TO SCHEMA OWNER;

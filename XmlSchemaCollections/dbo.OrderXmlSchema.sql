@@ -1,0 +1,2 @@
+CREATE XML SCHEMA COLLECTION [dbo].[OrderXmlSchema]
+    AS N'<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"><xsd:element name="Order"><xsd:complexType><xsd:complexContent><xsd:restriction base="xsd:anyType"><xsd:sequence><xsd:element name="OrderID" type="xsd:int" /><xsd:element name="Amount" type="xsd:decimal" /></xsd:sequence></xsd:restriction></xsd:complexContent></xsd:complexType></xsd:element></xsd:schema>';
