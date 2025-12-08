@@ -1,0 +1,6 @@
+CREATE TYPE [dbo].[NameStyle]
+    FROM BIT NOT NULL;
+GO
+ALTER AUTHORIZATION
+    ON TYPE::[dbo].[NameStyle]
+    TO SCHEMA OWNER;
