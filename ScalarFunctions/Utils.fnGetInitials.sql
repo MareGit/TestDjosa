@@ -1,0 +1,17 @@
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE FUNCTION [Utils].[fnGetInitials]
+(@FullName NVARCHAR (100))
+RETURNS NVARCHAR (10)
+AS
+BEGIN
+    DECLARE @Result AS NVARCHAR (10);
+    SELECT @Result = LEFT(@FullName, 1) + SUBSTRING(@FullName, CHARINDEX(' ', @FullName) + 1, 1);
+    RETURN @Result;
+END
+GO
+ALTER AUTHORIZATION
+    ON [Utils].[fnGetInitials]
+    TO SCHEMA OWNER;
