@@ -1,0 +1,18 @@
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [Sales].[Customers] (
+    [CustomerID]  INT                 IDENTITY (1, 1) NOT NULL,
+    [FullName]    NVARCHAR (100)      COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+    [Phone]       [dbo].[PhoneNumber] NOT NULL,
+    [CreatedDate] DATETIME            NULL,
+    PRIMARY KEY CLUSTERED ([CustomerID] ASC) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY];
+GO
+ALTER AUTHORIZATION
+    ON [Sales].[Customers]
+    TO SCHEMA OWNER;
+GO
+ALTER TABLE [Sales].[Customers]
+    ADD DEFAULT (getdate()) FOR [CreatedDate];
