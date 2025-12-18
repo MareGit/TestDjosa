@@ -1,0 +1,6 @@
+CREATE TYPE [dbo].[Name]
+    FROM NVARCHAR (50) NULL;
+GO
+ALTER AUTHORIZATION
+    ON TYPE::[dbo].[Name]
+    TO SCHEMA OWNER;
