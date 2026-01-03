@@ -1,0 +1,6 @@
+CREATE TYPE [dbo].[Flag]
+    FROM BIT NOT NULL;
+GO
+ALTER AUTHORIZATION
+    ON TYPE::[dbo].[Flag]
+    TO SCHEMA OWNER;

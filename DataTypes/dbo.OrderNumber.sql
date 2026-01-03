@@ -1,0 +1,6 @@
+CREATE TYPE [dbo].[OrderNumber]
+    FROM NVARCHAR (25) NULL;
+GO
+ALTER AUTHORIZATION
+    ON TYPE::[dbo].[OrderNumber]
+    TO SCHEMA OWNER;
