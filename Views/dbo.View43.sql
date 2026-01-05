@@ -1,0 +1,15 @@
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE VIEW [View43]
+AS
+SELECT [ID],
+       [Name],
+       [Value],
+       [CreatedDate]
+FROM   [Table43];
+GO
+ALTER AUTHORIZATION
+    ON [dbo].[View43]
+    TO SCHEMA OWNER;
