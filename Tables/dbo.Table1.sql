@@ -3,10 +3,10 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Table1] (
-    [ID]          INT             IDENTITY (1, 1) NOT NULL,
-    [Name]        NVARCHAR (50)   COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
-    [Value]       DECIMAL (10, 2) NULL,
-    [CreatedDate] DATETIME        NULL,
+    [ID]           INT             IDENTITY (1, 1) NOT NULL,
+    [Name]         NVARCHAR (50)   COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+    [Value]        DECIMAL (10, 2) NULL,
+    [CreatedDate5] DATETIME        NULL,
     PRIMARY KEY CLUSTERED ([ID] ASC) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY];
 GO
@@ -21,4 +21,4 @@ CREATE NONCLUSTERED INDEX [IDX_Table1_Name]
     ON [PRIMARY];
 GO
 ALTER TABLE [dbo].[Table1]
-    ADD DEFAULT (getdate()) FOR [CreatedDate];
+    ADD DEFAULT (getdate()) FOR [CreatedDate5];
